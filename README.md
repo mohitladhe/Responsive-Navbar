@@ -32,7 +32,7 @@ This project features a **modern, responsive navigation bar** built using **HTML
 
 ### 📱 Mobile Sidebar View
 
-<p align="center">
+<p align="start">
   <img src="./images/mobile-view-1.png" alt="Mobile Content View" width="250"/>
   &nbsp;&nbsp;&nbsp;
   <img src="./images/mobile-view-2.png" alt="Mobile Menu View" width="250"/>
@@ -47,20 +47,14 @@ This project features a **modern, responsive navigation bar** built using **HTML
 
 ## 📂 Folder Structure
 
-/responsive-navbar
-├── index.html
-├── /styles
-│ └── style.css
-├── /scripts
-│ └── script.js
-└── images/
+<pre> /responsive-navbar ├── index.html ├── /styles │ └── style.css ├── /scripts │ └── script.js └── /images </pre>
 
 ## 🚀 Getting Started
 
 1. Clone this repository:
 ```bash
 git clone https://github.com/your-username/responsive-navbar.git
-
+```
 2. Open index.html in any web browser.
 
 3. Resize the window to observe the responsive behavior.
