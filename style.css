@@ -74,8 +74,8 @@ body {
 }
 
 .logo-title {
-    font-size: 6vh;
-    font-family: 'Montserrat' ,serif;
+    font-size: 3vw;
+    font-family: 'Montserrat', serif;
     color: rgb(255, 255, 255);
 }
 
@@ -149,12 +149,12 @@ body {
 
 /* Show sidebar when open */
 .sidebar.open {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 /* Hide sidebar when close */
 .sidebar.close {
-  transform: translateX(100%);
+    transform: translateX(100%);
 }
 
 .sidebar a {
@@ -183,8 +183,10 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(10px); /* This applies the blur */
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    backdrop-filter: blur(10px);
+    /* This applies the blur */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari support */
     z-index: 999;
     display: none;
 }
@@ -227,14 +229,14 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar ul li:hover {
     background: linear-gradient(135deg, #333333, #666666);
     color: white;
     transform: translateX(5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Optional: add icons using pseudo-elements (Font Awesome or emojis) */
@@ -295,6 +297,10 @@ body {
     .hamburger-menu {
         display: flex !important;
     }
+
+    .logo-title {
+        font-size: 4vw;
+    }
 }
 
 /* Phones (480px – 767px) */
@@ -315,6 +321,10 @@ body {
     .hamburger-menu {
         display: flex !important;
     }
+
+    .logo-title {
+        font-size: 4vw;
+    }
 }
 
 /* Tablets (768px – 1023px) */
@@ -334,16 +344,16 @@ body {
     .hamburger-menu {
         display: flex !important;
     }
+
+    .logo-title {
+        font-size: 4vw;
+    }
 }
 
 /* Small desktops (1024px – 1279px) */
-@media (min-width: 1024px) and (max-width: 1279px) {
-
-}
+@media (min-width: 1024px) and (max-width: 1279px) {}
 
 /* Large desktops (≥ 1280px) */
-@media (min-width: 1280px) {
-
-}
+@media (min-width: 1280px) {}
 
 /* ===========================================================  Media Queries End ========================================================== */
