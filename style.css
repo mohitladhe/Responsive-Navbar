@@ -51,7 +51,8 @@ body {
 
 .navigation {
     width: 100%;
-    height: 3.5vw;
+    /* height: 3.5vw; */
+    height: 5vh;
     display: grid;
     grid-template-columns: [col-1] 1fr, [col-2] 1fr, [col-3] 1fr, [col-4] 1fr, [col-5] 1fr, [col-6] 1fr, [col-7] 1fr;
     /* grid-template-columns: repeat(6, 1fr); */
@@ -178,7 +179,7 @@ body {
 
 .hamburger-menu img {
     width: 6vw;
-    height: 3vw;
+    height: 3vh;
 }
 
 .blur-screen {
