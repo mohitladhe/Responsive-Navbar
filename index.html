@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="parent">
+        <main class="navigation">
+            <div class="logo-container">
+                <!-- <img src="images/logo.png" alt="logo" class="logo"> -->
+                 <div class="logo-title hollow-font-2">LOGO</div>
+            </div>
+            <nav class="navbar">
+                <div class="nav-item nav-item-outline"><a href="#Home">Home</a></div>
+                <div class="nav-item nav-item-regular"><a href="#About">About</a></div>
+                <div class="nav-item nav-item-regular"><a href="#Services">Services</a></div>
+                <div class="nav-item nav-item-regular"><a href="#Contact">Contact</a></div>
+                <div class="hamburger-menu" onclick="toggleSidebarOpen()">
+                    <img src="images/menu-bar-icon.svg" alt="hamburger-menu">
+                </div>
+            </nav>
+        </main>
+
+        <div class="blur-screen"></div>
+
+        <div class="sidebar" id="sidebar">
+            <div class="close-menu" onclick="toggleSidebarClose()">Close Menu &gt;</div>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Scrollable Content Area -->
+        <div class="content">
+            <div class="title hollow-font-1">Content</div>
+            <div class="title title-font">Content</div>
+            <div class="title hollow-font-1">Content</div>
+            <div class="title hollow-font-1">Content</div>
+            <div class="title hollow-font-1">Content</div>
+            <div class="title hollow-font-1">Content</div>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+
+</html>

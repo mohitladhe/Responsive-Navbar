@@ -1,0 +1,353 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@500&f[]=montserrat@800,900&display=swap');
+
+@font-face {
+    font-family: 'Bartino-Regular';
+    /* Name you choose */
+    src: url('fonts/Bartino-Regular.otf') format('opentype');
+    /* or .otf for opentype */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BartinoOutline-Regular';
+    /* Name you choose */
+    src: url('fonts/BartinoOutline-Regular.otf') format('opentype');
+    /* or .otf for opentype */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 5px;
+}
+
+.parent {
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* prevent outer scroll */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.hollow-font-1 {
+    color: transparent;
+    /* No fill */
+    -webkit-text-stroke: 0.1px white;
+}
+
+.hollow-font-2 {
+    color: transparent;
+    /* No fill */
+    -webkit-text-stroke: 5px white;
+}
+
+/* ===========================================================  Header Start ========================================================== */
+
+.navigation {
+    width: 100%;
+    height: 3.5vw;
+    display: grid;
+    grid-template-columns: [col-1] 1fr, [col-2] 1fr, [col-3] 1fr, [col-4] 1fr, [col-5] 1fr, [col-6] 1fr, [col-7] 1fr;
+    /* grid-template-columns: repeat(6, 1fr); */
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    position: sticky;
+    /* you can also use fixed if needed */
+    top: 0;
+    z-index: 1;
+}
+
+.logo-container {
+    width: 100%;
+    height: 100%;
+    grid-row: 1/7;
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 50%;
+    height: 70%;
+}
+
+.logo-title {
+    font-size: 3vw;
+    font-family: 'Montserrat' ,serif;
+}
+
+/* ===========================================================  Navbar Start ========================================================== */
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    grid-row: 7/-1;
+    grid-column: 2/7;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -1px;
+    padding-bottom: 1px;
+    background-image: url(images/nav-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-item {
+    display: flex;
+    align-self: center;
+    color: rgb(78, 78, 78);
+    cursor: pointer;
+}
+
+.nav-item-regular {
+    font-family: 'Bartino-Regular', sans-serif;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+.nav-item-outline {
+    font-family: 'BartinoOutline-Regular', sans-serif;
+    font-size: 2vw;
+    font-weight: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===========================================================  Navbar End ========================================================== */
+
+/* ===========================================================  Sidebar Start ========================================================== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 92vh;
+    background-color: #ffffff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.458);
+    transform: translateX(100%);
+    /* Hidden by default */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    /* Default for small devices */
+    width: 75vw;
+    max-width: 280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* Show sidebar when open */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Hide sidebar when close */
+.sidebar.close {
+  transform: translateX(100%);
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hamburger-menu {
+    grid-row: 7/-1;
+    grid-column: 6/7;
+    display: none;
+    /* hidden by default (large screens) */
+    align-items: center;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+
+.hamburger-menu img {
+    width: 6vw;
+    height: 3vw;
+}
+
+.blur-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px); /* This applies the blur */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    z-index: 999;
+    display: none;
+}
+
+.close-menu {
+    font-family: 'Clash Display', serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000000;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease;
+}
+
+.close-menu:hover {
+    transform: translateX(-5px);
+    color: #333333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 1.3rem;
+    color: #333;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background: linear-gradient(135deg, #f5f5f5, #ffffff);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar ul li:hover {
+    background: linear-gradient(135deg, #333333, #666666);
+    color: white;
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Optional: add icons using pseudo-elements (Font Awesome or emojis) */
+.sidebar ul li::before {
+    content: "⁜";
+    font-size: 1.5rem;
+}
+
+/* ===========================================================  Sidebar End ========================================================== */
+
+/* ===========================================================  Header End ========================================================== */
+.content {
+    border-top-right-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    flex: 1;
+    overflow-y: scroll;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+.title {
+    font-size: 10vw;
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+.title-font {
+    color: rgb(255, 255, 255);
+}
+
+/* ===========================================================  Media Queries Start ========================================================== */
+
+/* Small Phones (0px – 479px) */
+@media (max-width: 479px) {
+    .sidebar {
+        width: 75vw;
+        max-width: 280px;
+    }
+
+    .navbar {
+        justify-content: flex-end;
+    }
+
+    .nav-item {
+        display: none !important;
+    }
+
+    .hamburger-menu {
+        display: flex !important;
+    }
+}
+
+/* Phones (480px – 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .sidebar {
+        width: 75vw;
+        max-width: 280px;
+    }
+
+    .navbar {
+        justify-content: flex-end;
+    }
+
+    .nav-item {
+        display: none !important;
+    }
+
+    .hamburger-menu {
+        display: flex !important;
+    }
+}
+
+/* Tablets (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .sidebar {
+        width: 250px;
+    }
+
+    .navbar {
+        justify-content: flex-end;
+    }
+
+    .nav-item {
+        display: none !important;
+    }
+
+    .hamburger-menu {
+        display: flex !important;
+    }
+}
+
+/* Small desktops (1024px – 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+}
+
+/* Large desktops (≥ 1280px) */
+@media (min-width: 1280px) {
+
+}
+
+/* ===========================================================  Media Queries End ========================================================== */
