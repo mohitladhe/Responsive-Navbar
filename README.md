@@ -32,8 +32,11 @@ This project features a **modern, responsive navigation bar** built using **HTML
 
 ### 📱 Mobile Sidebar View
 
-<img src="./images/mobile-view-1.png" width="350"/>
-<img src="./images/mobile-view-2.png" width="350"/>
+<p align="center">
+  <img src="./assets/images/mobile-view-1.png" alt="Mobile Content View" width="250"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="./assets/images/mobile-view-2.png" alt="Mobile Menu View" width="250"/>
+</p>
 
 
 ## 🛠️ Technologies Used
