@@ -48,12 +48,12 @@ This project features a **modern, responsive navigation bar** built using **HTML
 ## 📂 Folder Structure
 
 <pre> /responsive-navbar
-      ├── index.html 
-      ├── /styles 
-      │ └── style.css 
-      ├── /scripts 
-      │ └── script.js 
-      └── /images </pre>
+├── index.html 
+├── /styles 
+│ └── style.css 
+├── /scripts 
+│ └── script.js 
+└── /images </pre>
 
 ## 🚀 Getting Started
 
