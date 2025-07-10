@@ -18,6 +18,15 @@
     font-style: normal;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
 body {
     margin: 0;
     padding: 5px;
