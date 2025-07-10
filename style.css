@@ -66,6 +66,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid white;
 }
 
 .logo {
@@ -77,6 +78,7 @@ body {
     font-size: 3vw;
     font-family: 'Montserrat', serif;
     color: rgb(255, 255, 255);
+    border: 2px solid red;
 }
 
 /* ===========================================================  Navbar Start ========================================================== */
